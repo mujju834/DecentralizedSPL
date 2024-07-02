@@ -43,7 +43,7 @@ const App = () => {
     if (contract && productName && manufacturerName) {
       try {
         await contract.methods.createProduct(productName, manufacturerName).send({ from: selectedAccount });
-        console.log("Product created successfully");
+        alert("Product created successfully");
       } catch (error) {
         console.error("Error creating product:", error);
       }
