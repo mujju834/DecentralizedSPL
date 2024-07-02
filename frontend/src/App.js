@@ -30,10 +30,10 @@ const App = () => {
           setSelectedAccount(accounts[0]);
           setContract(instance);
         } else {
-          console.error('Smart contract not deployed to detected network.');
+          alert('Smart contract not deployed to detected network.');
         }
       } catch (error) {
-        console.error('Error loading web3, accounts, or contract:', error);
+        alert('Error loading web3, accounts, or contract:', error);
       }
     };
     init();
@@ -45,10 +45,10 @@ const App = () => {
         await contract.methods.createProduct(productName, manufacturerName).send({ from: selectedAccount });
         alert("Product created successfully");
       } catch (error) {
-        console.error("Error creating product:", error);
+        alert("Error creating product:", error);
       }
     } else {
-      console.error("Contract is not loaded properly or product details are missing");
+      alert("Contract is not loaded properly or product details are missing");
     }
   };
 
@@ -64,10 +64,10 @@ const App = () => {
         setProducts(products);
         console.log("Products fetched successfully:", products);
       } catch (error) {
-        console.error("Error fetching products:", error);
+        alert("Error fetching products:", error);
       }
     } else {
-      console.error("Contract is not loaded properly");
+      alert("Contract is not loaded properly");
     }
   };
 
