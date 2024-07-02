@@ -74,6 +74,7 @@ const App = () => {
   return (
     <div className="app">
       <h1>Supply Chain Management System</h1>
+      <h3>Note:The data will be stored on the Ethereum blockchain using alchemy Node</h3>
       <label htmlFor="account-select">Select Account:</label>
       <select
         id="account-select"
